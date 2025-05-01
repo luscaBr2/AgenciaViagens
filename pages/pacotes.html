@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes de viagens</title>
+
+    <!-- CSS boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles/reset.css">
+
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+
+    <link rel="stylesheet" href="../styles/pacotes.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- backgroud com style inline para facilitar a mudança de imagem em outras páginas que usarão o mesmo css -->
+        <div class="container-header" style="background-image: url(../assets/hallstatt-austria.jpg)">
+            <nav>
+                <!-- logo -->
+                <img src="" alt="">
+
+                <ul class="navegadores">
+                    <b><a href="../index.html">HOME</a></b>
+                    <b><a href="pages/pacotes.html">PACOTES</a></b>
+                    <b><a href="pages/destinos.html">DESTINOS</a></b>
+                    <b><a href="#">CONTATO</a></b>
+                    <b><a href="#">PRECISA DE MAIS 1 PÁGINA</a></b>
+
+                    <!-- AQUI VAI O BOTÃO DE X EM CASO DE RESPONSIVIDADE -->
+                </ul>
+            </nav>
+
+            <!-- Banner principal -->
+            <section class="banner">
+                <div class="banner-texto">
+                    <h1>
+                        <span class="font-navada-outline">PACOTES</span>
+                        <span class="font-navada">DISPONIVEIS</span>
+                    </h1>
+                </div>
+            </section>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="pacotes-nacionais">
+            <div class="texto-pacotes">
+                <h3>Terra brasileira</h3>
+                <img src="https://img.icons8.com/?size=100&id=zHmH8HpOmM90&format=png&color=000000"
+                    alt="brandeira do brasil">
+            </div>
+    
+            <div class="carrossel-pacotes">
+                <div class="container my-5">
+    
+                    <div class="carrossel-wrapper">
+                        <button class="botao-carrossel botao-esquerda" onclick="scrollCarrossel(-1)">&#10094;</button>
+    
+                        <div class="carrossel" id="carrosselCards">
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+    
+                        </div>
+    
+                        <button class="botao-carrossel botao-direita" onclick="scrollCarrossel(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pacotes-internacionais">
+            <div class="texto-pacotes">
+                <h3>Terra brasileira</h3>
+                <img src="https://img.icons8.com/?size=100&id=zHmH8HpOmM90&format=png&color=000000"
+                    alt="brandeira do brasil">
+            </div>
+    
+            <div class="carrossel-pacotes">
+                <div class="container my-5">
+    
+                    <div class="carrossel-wrapper">
+                        <button class="botao-carrossel botao-esquerda" onclick="scrollCarrossel(-1)">&#10094;</button>
+    
+                        <div class="carrossel" id="carrosselCards">
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+    
+                        </div>
+    
+                        <button class="botao-carrossel botao-direita" onclick="scrollCarrossel(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">© 2025 | Site para portifólio</p>
+
+        <div class="redes-sociais">
+            <p>Desenvolvido por Lucas Santos</p>
+
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/lusca_br2/" id="twitter" class="social-btn flex-center">
+                    <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
+                        alt="instagram desenvolvedor">
+
+                    <span>@lusca_br2</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/lucas-santos387/" id="linkedin" class="social-btn flex-center">
+                    <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+                        alt="linkedin desenvolvedor">
+
+                    <span>lucas-santos387</span>
+                </a>
+
+                <a href="https://github.com/luscaBr2" id="github" class="social-btn flex-center">
+                    <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
+                        alt="github desenvolvedor">
+                    <span>luscaBr2</span>
+                </a>
+
+                <a href="mailto:lucas.ifsp387@gmail.com" id="github" class="social-btn flex-center">
+                    <img src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000"
+                        alt="gmail desenvolvedor">
+                    <span>lucas.ifsp387@gmail.com</span>
+                </a>
+            </div>
+
+        </div>
+
+        <ul class=" nav col-md-4 justify-content-end">
+            <button onclick="voltarAoTopo()" class="btn btn-outline-light">Voltar ao topo</button>
+        </ul>
+
+        <!-- função para o botão de voltar ao topo, scrollar para o topo de página de maneira suave -->
+        <script>
+            function voltarAoTopo() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        </script>
+
+    </footer>
+
+    <!-- Script com auto scroll e loop -->
+    <script>
+        const carrossel = document.getElementById('carrosselCards');
+        const cardWidth = 270; // card + gap
+
+        function scrollCarrossel(direction) {
+            const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
+
+            if (direction === 1 && Math.ceil(carrossel.scrollLeft) >= maxScrollLeft) {
+                carrossel.scrollTo({ left: 0, behavior: 'smooth' });
+            } else if (direction === -1 && carrossel.scrollLeft <= 0) {
+                carrossel.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+            } else {
+                carrossel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+            }
+        }
+
+        // Auto scroll a cada 3 segundos
+        // setInterval(() => {
+        //     scrollCarrossel(1);
+        // }, 3000);
+    </script>
+
+    <!-- JS boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+Carrossel de imagens: Mostrar destinos em destaque com um slider automático.
+
+Busca de destinos: Um campo de pesquisa que filtra destinos por nome ou categoria (praia, aventura, cultural, etc.).
+
+Galeria de fotos com zoom: Clicar em uma foto para vê-la em tela cheia ou com efeito de zoom.
+
+Formulário de contato: Para clientes solicitarem orçamentos (pode validar o formulário com JS).
+
+Menu hamburguer responsivo: Um menu que aparece/fecha com clique, para mobile.
+
+Avaliações/testemunhos: Sistema simples de depoimentos, podendo adicionar um novo via formulário local (sem servidor, só na página).
+

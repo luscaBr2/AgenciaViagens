@@ -1,0 +1,108 @@
+/* Carrossel de cards */
+
+.carrossel-wrapper {
+    position: relative;
+}
+
+.carrossel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.carrossel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    min-width: 250px;
+    flex-shrink: 0;
+    border-radius: 15px;
+}
+
+.botao-carrossel {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    color: #555;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-esquerda {
+    left: 0;
+}
+
+.botao-direita {
+    right: 0;
+}
+
+.botao-carrossel:hover {
+    background-color: #f1f1f1;
+}
+
+/* ===================== */
+main{
+}
+
+.pacotes-nacionais {
+    display: flex;
+    
+}
+
+.pacotes-internacionais {
+    display: flex;
+}
+
+.texto-pacotes {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.texto-pacotes h3,
+.texto-pacotes img {
+    display: block;
+    margin: 0 auto;
+}
+
+.texto-pacotes {
+    flex-direction: column;
+    gap: 10px;
+}
+
+.carrossel-pacotes {
+    width: 70%;
+}
+
+.card img{
+    max-width: 350px;
+    height: auto;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+main a{
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+main a:hover{
+    border: 1px solid #00a080;
+    border-radius: 15px;
+}
