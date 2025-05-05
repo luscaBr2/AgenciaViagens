@@ -42,11 +42,11 @@
 }
 
 .botao-esquerda {
-    left: 0;
+    left: -30px;
 }
 
 .botao-direita {
-    right: 0;
+    right: -30px;
 }
 
 .botao-carrossel:hover {
@@ -54,14 +54,13 @@
 }
 
 /* ===================== */
-main{
-}
 
 .pacotes-nacionais {
     display: flex;
-    
 }
-
+.pacotes-promocionais {
+    display: flex;
+}
 .pacotes-internacionais {
     display: flex;
 }
@@ -86,11 +85,12 @@ main{
 }
 
 .carrossel-pacotes {
+    margin: 0 25px;
     width: 70%;
 }
 
 .card img{
-    max-width: 350px;
+    max-width: 250px;
     height: auto;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
@@ -105,4 +105,17 @@ main a{
 main a:hover{
     border: 1px solid #00a080;
     border-radius: 15px;
+}
+
+.banner-promocao{
+    background: linear-gradient(to right, #00a080, #1B4C74);
+    border-radius: 15px;
+    margin: 68px 10px;
+    height: auto;
+    color: white;
+}
+
+.banner-promocao h2{
+    color: white;
+    font-size: 3em;
 }

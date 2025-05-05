@@ -19,7 +19,6 @@
 </head>
 
 <body>
-
     <header>
         <!-- backgroud com style inline para facilitar a mudança de imagem em outras páginas que usarão o mesmo css -->
         <div class="container-header" style="background-image: url(../assets/hallstatt-austria.jpg)">
@@ -29,10 +28,10 @@
 
                 <ul class="navegadores">
                     <b><a href="../index.html">HOME</a></b>
-                    <b><a href="pages/pacotes.html">PACOTES</a></b>
-                    <b><a href="pages/destinos.html">DESTINOS</a></b>
+                    <b><a href="pacotes.html">PACOTES</a></b>
+                    <b><a href="">CONSULTAR VIAGEM</a></b>
+                    <b><a href="">PERGUNTAS FREQUENTES</a></b>
                     <b><a href="#">CONTATO</a></b>
-                    <b><a href="#">PRECISA DE MAIS 1 PÁGINA</a></b>
 
                     <!-- AQUI VAI O BOTÃO DE X EM CASO DE RESPONSIVIDADE -->
                 </ul>
@@ -52,20 +51,75 @@
     </header>
 
     <main>
-        <div class="pacotes-nacionais">
-            <div class="texto-pacotes">
-                <h3>Terra brasileira</h3>
-                <img src="https://img.icons8.com/?size=100&id=zHmH8HpOmM90&format=png&color=000000"
-                    alt="brandeira do brasil">
-            </div>
+
+        <div class="pacotes-promocionais">
+            <div class="texto-pacotes banner-promocao">
+                <h2>
+                    <span class="font-navada">PACOTES</span> 
+                    <span class="font-navada-outline">PROMOCIONAIS</span>
+                </h2>
+                <h4>Por tempo limitado, aproveite!</h4>
+                
+                <h4 id="contagem-regressiva"></h4>
+                
+                <!-- Script para funcionar a contagem regressiva -->
+                <script defer>
+                    // fonte: https://www.youtube.com/watch?v=nMn2_5kvbHo
+                    // defer espera o html carregar por inteiro pra depois carregar o js
     
+                    function startTimer(duration, display) {
+                        var timer = duration, days, hours, minutes, seconds;
+    
+                        // setInterval serve para executar algum comando em X milisegundos, indicados no fim do bloco
+                        setInterval(function() {
+                            days = parseInt(timer / (60 * 60 * 24), 10);
+                            hours = parseInt((timer % (60 * 60 * 24)) / (60 * 60), 10);
+                            minutes = parseInt((timer % (60 * 60)) / 60, 10);
+                            seconds = parseInt(timer % 60, 10);
+    
+                            // se os dias/horas/minutos/segundos forem menor que 10, concatenar com um zero atrás
+                            days = days < 10 ? "0" + days : days;
+                            hours = hours < 10 ? "0" + hours : hours;
+                            minutes = minutes < 10 ? "0" + minutes : minutes;
+                            seconds = seconds < 10 ? "0" + seconds : seconds;
+    
+                            // constrói o texto que será exibido na var display
+                            display.textContent = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
+    
+                            // tira 1 do timer, se for menor que zero
+                            if (--timer < 0) {
+                                timer = duration;
+                            }
+    
+                        }, 1000); /* esse 1000 é de ms, ou seja, 1000 ms = 1 seg */
+                    }
+    
+                    //window.onload serve para executar X função assim que a página carregar
+                    window.onload = function() {
+                        // só pra facilitar a edição do tempo
+                        var dias = 5;
+                        var horas = 15;
+                        var minutos = 47;
+                        var segundos = 42;
+    
+                        var totalEmSegundos = (dias * 24 * 60 * 60) + (horas * 60 * 60) + (minutos * 60) + segundos;
+    
+                        // duration tem que ser informado em segundos
+                        var duration = totalEmSegundos;
+    
+                        var display = document.querySelector("#contagem-regressiva") // elemento pra exibir o timer
+    
+                        startTimer(duration, display); // inicia a função
+                    }
+                </script>
+            </div>
+
             <div class="carrossel-pacotes">
                 <div class="container my-5">
     
                     <div class="carrossel-wrapper">
-                        <button class="botao-carrossel botao-esquerda" onclick="scrollCarrossel(-1)">&#10094;</button>
-    
-                        <div class="carrossel" id="carrosselCards">
+                        <button class="botao-carrossel botao-esquerda" onclick="carrosselCardsPromocional(-1)">&#10094;</button>
+                        <div class="carrossel" id="carrosselCardsPromocionais">
     
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
@@ -160,26 +214,140 @@
     
                         </div>
     
-                        <button class="botao-carrossel botao-direita" onclick="scrollCarrossel(1)">&#10095;</button>
+                        <button class="botao-carrossel botao-direita" onclick="carrosselCardsPromocional(1)">&#10095;</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        
+        <div class="pacotes-nacionais">
+            <div class="carrossel-pacotes">
+                <div class="container my-5">
+    
+                    <div class="carrossel-wrapper">
+                        <button class="botao-carrossel botao-esquerda" onclick="scrollCarrosselNacional(-1)">&#10094;</button>
+    
+                        <div class="carrossel" id="carrosselCardsNacionais">
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+                            <a href="#" class="card">
+                                <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rio de Janeiro</h5>
+                                    <p class="card-text">Saindo de São Paulo<br>30/05 a 06/06</p>
+                                    <p class="fw-bold">4x de R$ 142</p>
+                                    <p class="text-muted">A partir de R$ 569*</p>
+                                </div>
+                            </a>
+    
+    
+                        </div>
+    
+                        <button class="botao-carrossel botao-direita" onclick="scrollCarrosselNacional(1)">&#10095;</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="texto-pacotes">
+                <h3>Terra brasileira</h3>
+                <img src="https://img.icons8.com/?size=100&id=zHmH8HpOmM90&format=png&color=000000"
+                    alt="brandeira do brasil">
             </div>
         </div>
 
         <div class="pacotes-internacionais">
+             
             <div class="texto-pacotes">
-                <h3>Terra brasileira</h3>
-                <img src="https://img.icons8.com/?size=100&id=zHmH8HpOmM90&format=png&color=000000"
-                    alt="brandeira do brasil">
+                <h3>Internacionais</h3>
+                <img src="https://img.icons8.com/?size=100&id=FgQA7dXq52M9&format=png&color=000000" alt="globo com um avião">
             </div>
-    
+
             <div class="carrossel-pacotes">
                 <div class="container my-5">
     
                     <div class="carrossel-wrapper">
-                        <button class="botao-carrossel botao-esquerda" onclick="scrollCarrossel(-1)">&#10094;</button>
+                        <button class="botao-carrossel botao-esquerda" onclick="scrollCarrosselInternacional(-1)">&#10094;</button>
     
-                        <div class="carrossel" id="carrosselCards">
+                        <div class="carrossel" id="carrosselCardsInternacionais">
     
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
@@ -274,13 +442,13 @@
     
                         </div>
     
-                        <button class="botao-carrossel botao-direita" onclick="scrollCarrossel(1)">&#10095;</button>
+                        <button class="botao-carrossel botao-direita" onclick="scrollCarrosselInternacional(1)">&#10095;</button>
                     </div>
                 </div>
             </div>
         </div>
 
-    </main>
+    </main>      
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
         <p class="col-md-4 mb-0 text-body-secondary">© 2025 | Site para portifólio</p>
@@ -332,20 +500,57 @@
 
     </footer>
 
-    <!-- Script com auto scroll e loop -->
+    <!-- Script do scroll com loop quando chega no final -->
     <script>
-        const carrossel = document.getElementById('carrosselCards');
-        const cardWidth = 270; // card + gap
+        const cardWidth = 350; // O quanto vai pra frente a cada clique
+        //350 pois é o tamanho do card
 
-        function scrollCarrossel(direction) {
-            const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
+        // Carrossel de pacotes promocionais
 
-            if (direction === 1 && Math.ceil(carrossel.scrollLeft) >= maxScrollLeft) {
-                carrossel.scrollTo({ left: 0, behavior: 'smooth' });
-            } else if (direction === -1 && carrossel.scrollLeft <= 0) {
-                carrossel.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+        const carrosselCardsPromocionais = document.getElementById('carrosselCardsPromocionais');
+        
+        // direction = 1 (para frente) ou -1 (para trás)
+        function carrosselCardsPromocional(direction) {
+            const maxScrollLeft = carrosselCardsPromocionais.scrollWidth - carrosselCardsPromocionais.clientWidth;
+
+            if (direction === 1 && Math.ceil(carrosselCardsPromocionais.scrollLeft) >= maxScrollLeft) {
+                carrosselCardsPromocionais.scrollTo({ left: 0, behavior: 'smooth' });
+            } else if (direction === -1 && carrosselCardsPromocionais.scrollLeft <= 0) {
+                carrosselCardsPromocionais.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
             } else {
-                carrossel.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+                carrosselCardsPromocionais.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+            }
+        }
+        
+        // Carrossel de pacotes nacionais
+
+        const carrosselCardsNacionais = document.getElementById('carrosselCardsNacionais');
+        
+        function scrollCarrosselNacional(direction) {
+            const maxScrollLeft = carrosselCardsNacionais.scrollWidth - carrosselCardsNacionais.clientWidth;
+
+            if (direction === 1 && Math.ceil(carrosselCardsNacionais.scrollLeft) >= maxScrollLeft) {
+                carrosselCardsNacionais.scrollTo({ left: 0, behavior: 'smooth' });
+            } else if (direction === -1 && carrosselCardsNacionais.scrollLeft <= 0) {
+                carrosselCardsNacionais.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+            } else {
+                carrosselCardsNacionais.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
+            }
+        }
+
+        // Carrossel de pacotes internacionais
+
+        const carrosselCardsInternacionais = document.getElementById('carrosselCardsInternacionais');
+        
+        function scrollCarrosselInternacional(direction) {
+            const maxScrollLeft = carrosselCardsInternacionais.scrollWidth - carrosselCardsInternacionais.clientWidth;
+
+            if (direction === 1 && Math.ceil(carrosselCardsInternacionais.scrollLeft) >= maxScrollLeft) {
+                carrosselCardsInternacionais.scrollTo({ left: 0, behavior: 'smooth' });
+            } else if (direction === -1 && carrosselCardsInternacionais.scrollLeft <= 0) {
+                carrosselCardsInternacionais.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+            } else {
+                carrosselCardsInternacionais.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
             }
         }
 

@@ -10,11 +10,11 @@ footer a {
 
 /* ====================== */
 
-.redes-sociais a{
+.redes-sociais a {
     text-decoration: none;
 }
 
-.redes-sociais p{
+.redes-sociais p {
     text-align: center;
 }
 
@@ -39,13 +39,14 @@ footer a {
 }
 
 .social-btn img {
-    margin-left: 5px; /* micro correção para o alinhamento do icone com o botão*/
+    margin-left: 5px;
+    /* micro correção para o alinhamento do icone com o botão*/
     height: 50px;
     width: 50px;
 }
 
 .social-btn span {
-    width: 0px; 
+    width: 0px;
     overflow: hidden;
     transition: 0.3s;
     text-align: left;
@@ -53,7 +54,8 @@ footer a {
 }
 
 .social-btn:hover {
-    width: 16.5rem; /* Aumenta a largura do botão ao passar o mouse */
+    /* Aumenta a largura do botão ao passar o mouse, tem que ser em px se não quebra a medida da resolução da tela */
+    width: 200px;
 }
 
 .social-btn:hover span {
