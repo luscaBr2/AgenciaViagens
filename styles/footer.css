@@ -1,0 +1,64 @@
+footer {
+    background: linear-gradient(to right, #00a080, #1B4C74);
+    color: white;
+    padding: 2rem;
+}
+
+footer a {
+    color: white;
+}
+
+/* ====================== */
+
+.redes-sociais a {
+    text-decoration: none;
+}
+
+.redes-sociais p {
+    text-align: center;
+}
+
+.social-links,
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-btn {
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    color: #111;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+    background: white;
+    margin: 5px;
+    transition: 0.3s;
+    justify-content: center;
+}
+
+.social-btn img {
+    margin-left: 5px;
+    /* micro correção para o alinhamento do icone com o botão*/
+    height: 50px;
+    width: 50px;
+}
+
+.social-btn span {
+    width: 0px;
+    overflow: hidden;
+    transition: 0.3s;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.social-btn:hover {
+    /* Aumenta a largura do botão ao passar o mouse, tem que ser em px se não quebra a medida da resolução da tela */
+    width: 200px;
+}
+
+.social-btn:hover span {
+    padding: 2px;
+    width: 250px;
+}
