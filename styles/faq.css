@@ -1,0 +1,50 @@
+main{
+    margin: 2rem;
+    width: 100%;
+}
+
+.perguntas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.perguntas h1{
+    font-size: 2.5rem;
+    color: #1B4C74;
+    margin-bottom: 2rem;
+}
+
+.perguntas button {
+    position: relative;
+    border-radius: 15px;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    font-size: 1.3rem;
+    color: white;
+    border: none;
+    background: linear-gradient(to right, #00a080, #1B4C74);
+    transition: background 0.5s ease;
+}
+
+.perguntas h2{
+    margin: 2rem;
+}
+
+.img-aviao, .img-onibus{
+    max-width: 300px;
+}
+
+/* ====================== */
+.documentos-aviao, .documentos-onibus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.documentos-aviao ol, .documentos-onibus ol{
+    margin: 4rem;
+}
+/* ====================== */

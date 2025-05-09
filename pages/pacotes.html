@@ -29,8 +29,8 @@
                 <ul class="navegadores">
                     <b><a href="../index.html">HOME</a></b>
                     <b><a href="pacotes.html">PACOTES</a></b>
-                    <b><a href="">CONSULTAR VIAGEM</a></b>
-                    <b><a href="">PERGUNTAS FREQUENTES</a></b>
+                    <b><a href="destinos.html">DESTINOS</a></b>
+                    <b><a href="faq.html">PERGUNTAS FREQUENTES</a></b>
                     <b><a href="#">CONTATO</a></b>
 
                     <!-- AQUI VAI O BOTÃO DE X EM CASO DE RESPONSIVIDADE -->
@@ -55,72 +55,27 @@
         <div class="pacotes-promocionais">
             <div class="texto-pacotes banner-promocao">
                 <h2>
-                    <span class="font-navada">PACOTES</span> 
+                    <span class="font-navada">PACOTES</span>
                     <span class="font-navada-outline">PROMOCIONAIS</span>
                 </h2>
                 <h4>Por tempo limitado, aproveite!</h4>
-                
+
                 <h4 id="contagem-regressiva"></h4>
-                
+
                 <!-- Script para funcionar a contagem regressiva -->
-                <script defer>
-                    // fonte: https://www.youtube.com/watch?v=nMn2_5kvbHo
-                    // defer espera o html carregar por inteiro pra depois carregar o js
-    
-                    function startTimer(duration, display) {
-                        var timer = duration, days, hours, minutes, seconds;
-    
-                        // setInterval serve para executar algum comando em X milisegundos, indicados no fim do bloco
-                        setInterval(function() {
-                            days = parseInt(timer / (60 * 60 * 24), 10);
-                            hours = parseInt((timer % (60 * 60 * 24)) / (60 * 60), 10);
-                            minutes = parseInt((timer % (60 * 60)) / 60, 10);
-                            seconds = parseInt(timer % 60, 10);
-    
-                            // se os dias/horas/minutos/segundos forem menor que 10, concatenar com um zero atrás
-                            days = days < 10 ? "0" + days : days;
-                            hours = hours < 10 ? "0" + hours : hours;
-                            minutes = minutes < 10 ? "0" + minutes : minutes;
-                            seconds = seconds < 10 ? "0" + seconds : seconds;
-    
-                            // constrói o texto que será exibido na var display
-                            display.textContent = days + "d " + hours + "h " + minutes + "m " + seconds + "s";
-    
-                            // tira 1 do timer, se for menor que zero
-                            if (--timer < 0) {
-                                timer = duration;
-                            }
-    
-                        }, 1000); /* esse 1000 é de ms, ou seja, 1000 ms = 1 seg */
-                    }
-    
-                    //window.onload serve para executar X função assim que a página carregar
-                    window.onload = function() {
-                        // só pra facilitar a edição do tempo
-                        var dias = 5;
-                        var horas = 15;
-                        var minutos = 47;
-                        var segundos = 42;
-    
-                        var totalEmSegundos = (dias * 24 * 60 * 60) + (horas * 60 * 60) + (minutos * 60) + segundos;
-    
-                        // duration tem que ser informado em segundos
-                        var duration = totalEmSegundos;
-    
-                        var display = document.querySelector("#contagem-regressiva") // elemento pra exibir o timer
-    
-                        startTimer(duration, display); // inicia a função
-                    }
-                </script>
+                <!-- defer espera o html carregar por inteiro pra depois carregar o js -->
+
+                <script defer src="../utils/contagemRegressiva.js"></script>
             </div>
 
             <div class="carrossel-pacotes">
                 <div class="container my-5">
-    
+
                     <div class="carrossel-wrapper">
-                        <button class="botao-carrossel botao-esquerda" onclick="carrosselCardsPromocional(-1)">&#10094;</button>
+                        <button class="botao-carrossel botao-esquerda"
+                            onclick="carrosselCardsPromocional(-1)">&#10094;</button>
                         <div class="carrossel" id="carrosselCardsPromocionais">
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -130,7 +85,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -140,7 +95,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -150,7 +105,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -160,7 +115,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -170,7 +125,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -180,7 +135,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -190,7 +145,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -200,7 +155,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -210,25 +165,27 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
-    
+
+
                         </div>
-    
-                        <button class="botao-carrossel botao-direita" onclick="carrosselCardsPromocional(1)">&#10095;</button>
+
+                        <button class="botao-carrossel botao-direita"
+                            onclick="carrosselCardsPromocional(1)">&#10095;</button>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="pacotes-nacionais">
             <div class="carrossel-pacotes">
                 <div class="container my-5">
-    
+
                     <div class="carrossel-wrapper">
-                        <button class="botao-carrossel botao-esquerda" onclick="scrollCarrosselNacional(-1)">&#10094;</button>
-    
+                        <button class="botao-carrossel botao-esquerda"
+                            onclick="scrollCarrosselNacional(-1)">&#10094;</button>
+
                         <div class="carrossel" id="carrosselCardsNacionais">
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -238,7 +195,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -248,7 +205,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -258,7 +215,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -268,7 +225,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -278,7 +235,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -288,7 +245,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -298,7 +255,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -308,7 +265,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -318,11 +275,12 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
-    
+
+
                         </div>
-    
-                        <button class="botao-carrossel botao-direita" onclick="scrollCarrosselNacional(1)">&#10095;</button>
+
+                        <button class="botao-carrossel botao-direita"
+                            onclick="scrollCarrosselNacional(1)">&#10095;</button>
                     </div>
                 </div>
             </div>
@@ -335,20 +293,22 @@
         </div>
 
         <div class="pacotes-internacionais">
-             
+
             <div class="texto-pacotes">
                 <h3>Internacionais</h3>
-                <img src="https://img.icons8.com/?size=100&id=FgQA7dXq52M9&format=png&color=000000" alt="globo com um avião">
+                <img src="https://img.icons8.com/?size=100&id=FgQA7dXq52M9&format=png&color=000000"
+                    alt="globo com um avião">
             </div>
 
             <div class="carrossel-pacotes">
                 <div class="container my-5">
-    
+
                     <div class="carrossel-wrapper">
-                        <button class="botao-carrossel botao-esquerda" onclick="scrollCarrosselInternacional(-1)">&#10094;</button>
-    
+                        <button class="botao-carrossel botao-esquerda"
+                            onclick="scrollCarrosselInternacional(-1)">&#10094;</button>
+
                         <div class="carrossel" id="carrosselCardsInternacionais">
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -358,7 +318,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -368,7 +328,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -378,7 +338,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -388,7 +348,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -398,7 +358,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -408,7 +368,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -418,7 +378,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -428,7 +388,7 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
+
                             <a href="#" class="card">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
@@ -438,17 +398,18 @@
                                     <p class="text-muted">A partir de R$ 569*</p>
                                 </div>
                             </a>
-    
-    
+
+
                         </div>
-    
-                        <button class="botao-carrossel botao-direita" onclick="scrollCarrosselInternacional(1)">&#10095;</button>
+
+                        <button class="botao-carrossel botao-direita"
+                            onclick="scrollCarrosselInternacional(1)">&#10095;</button>
                     </div>
                 </div>
             </div>
         </div>
 
-    </main>      
+    </main>
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
         <p class="col-md-4 mb-0 text-body-secondary">© 2025 | Site para portifólio</p>
@@ -492,71 +453,19 @@
         </ul>
 
         <!-- função para o botão de voltar ao topo, scrollar para o topo de página de maneira suave -->
-        <script>
-            function voltarAoTopo() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-            }
-        </script>
+        <script src="utils/voltarTopo.js"></script>
 
     </footer>
 
-    <!-- Script do scroll com loop quando chega no final -->
+    <!-- Script do scroll do carrossel de cards -->
+    <script src="../utils/carrosselPacotesPromocionais.js"></script>
+    <script src="../utils/carrosselPacotesNacionais.js"></script>
+    <script src="../utils/carrosselPacotesInternacionais.js"></script>
+
+    <!-- Auto scroll a cada 3 segundos -->
     <script>
-        const cardWidth = 350; // O quanto vai pra frente a cada clique
-        //350 pois é o tamanho do card
-
-        // Carrossel de pacotes promocionais
-
-        const carrosselCardsPromocionais = document.getElementById('carrosselCardsPromocionais');
-        
-        // direction = 1 (para frente) ou -1 (para trás)
-        function carrosselCardsPromocional(direction) {
-            const maxScrollLeft = carrosselCardsPromocionais.scrollWidth - carrosselCardsPromocionais.clientWidth;
-
-            if (direction === 1 && Math.ceil(carrosselCardsPromocionais.scrollLeft) >= maxScrollLeft) {
-                carrosselCardsPromocionais.scrollTo({ left: 0, behavior: 'smooth' });
-            } else if (direction === -1 && carrosselCardsPromocionais.scrollLeft <= 0) {
-                carrosselCardsPromocionais.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
-            } else {
-                carrosselCardsPromocionais.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-            }
-        }
-        
-        // Carrossel de pacotes nacionais
-
-        const carrosselCardsNacionais = document.getElementById('carrosselCardsNacionais');
-        
-        function scrollCarrosselNacional(direction) {
-            const maxScrollLeft = carrosselCardsNacionais.scrollWidth - carrosselCardsNacionais.clientWidth;
-
-            if (direction === 1 && Math.ceil(carrosselCardsNacionais.scrollLeft) >= maxScrollLeft) {
-                carrosselCardsNacionais.scrollTo({ left: 0, behavior: 'smooth' });
-            } else if (direction === -1 && carrosselCardsNacionais.scrollLeft <= 0) {
-                carrosselCardsNacionais.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
-            } else {
-                carrosselCardsNacionais.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-            }
-        }
-
-        // Carrossel de pacotes internacionais
-
-        const carrosselCardsInternacionais = document.getElementById('carrosselCardsInternacionais');
-        
-        function scrollCarrosselInternacional(direction) {
-            const maxScrollLeft = carrosselCardsInternacionais.scrollWidth - carrosselCardsInternacionais.clientWidth;
-
-            if (direction === 1 && Math.ceil(carrosselCardsInternacionais.scrollLeft) >= maxScrollLeft) {
-                carrosselCardsInternacionais.scrollTo({ left: 0, behavior: 'smooth' });
-            } else if (direction === -1 && carrosselCardsInternacionais.scrollLeft <= 0) {
-                carrosselCardsInternacionais.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
-            } else {
-                carrosselCardsInternacionais.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
-            }
-        }
-
-        // Auto scroll a cada 3 segundos
         // setInterval(() => {
-        //     scrollCarrossel(1);
+        //     <qualFunçãoUsar>(1);
         // }, 3000);
     </script>
 
