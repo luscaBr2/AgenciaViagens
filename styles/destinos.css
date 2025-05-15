@@ -3,15 +3,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 2rem 5rem;
+    margin: 2rem;
 }
 
 .conteudo-principal h2{
-    margin: 2rem 0;
+    margin-top: 2rem;
 }
 
 .img-conteudo{
     max-width: 200px;
+    margin: 0 1em;
 }
 
 /* ====================== */
@@ -21,4 +22,25 @@
     justify-content: center;
 }
 
+.conteudo table{
+    vertical-align: top;
+    margin: 0 0.5em;
+}
 /* ====================== */
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+    .conteudo table{
+        margin-bottom: 2rem;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-conteudo {
+        width: 100%;
+    }
+}
