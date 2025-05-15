@@ -53,12 +53,33 @@ footer a {
     margin-left: 5px;
 }
 
-.social-btn:hover {
-    /* Aumenta a largura do botão ao passar o mouse, tem que ser em px se não quebra a medida da resolução da tela */
-    width: 200px;
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .redes-sociais {
+        margin-top: 1rem;
+    }
+
+    .social-links a {
+        margin-bottom: 2rem;
+    }
 }
 
-.social-btn:hover span {
-    padding: 2px;
-    width: 250px;
+/* Só vai abrir o botão em telas maiores */
+@media (max-width > 768px) {
+    .social-btn:hover {
+        /* Aumenta a largura do botão ao passar o mouse, tem que ser em px se não quebra a medida da resolução da tela */
+        width: 200px;
+    }
+
+    /* Faz aparecer o texto dentro do botão */
+    .social-btn:hover span {
+        padding: 2px;
+        width: 250px;
+    }
+
 }
