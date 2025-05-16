@@ -8,7 +8,7 @@
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
-    gap: 20px;
+    gap: 5px;
     padding: 20px 0;
 }
 
@@ -42,11 +42,11 @@
 }
 
 .botao-esquerda {
-    left: -30px;
+    left: -25px;
 }
 
 .botao-direita {
-    right: -30px;
+    right: -25px;
 }
 
 .botao-carrossel:hover {
@@ -55,12 +55,8 @@
 
 /* ===================== */
 
-.pacotes-nacionais {
-    display: flex;
-}
-.pacotes-promocionais {
-    display: flex;
-}
+.pacotes-promocionais,
+.pacotes-nacionais,
 .pacotes-internacionais {
     display: flex;
 }
@@ -90,8 +86,9 @@
 }
 
 .card img{
+    /* essa altura define o tamanho da imagem no card, para que todas as imagens fiquem do mesmo tamanho */
+    height: 150px;
     max-width: 250px;
-    height: auto;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
 }
@@ -120,14 +117,31 @@ main a:hover{
     font-size: 3em;
 }
 
+/* Inicialmente, não aparece o elemento */
+.mobile-only{
+    display: none;
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
+    .mobile-only{
+        display: block;
+    }
+
+    /* para que os elementos que apenas deveriam aparecer em telas maiores sumirem */
+    .pc-only{
+        display: none;
+    }
+
+    .banner-promocao{
+        padding: 1.5rem 0;
+    }
+
     .pacotes-promocionais,
     .pacotes-nacionais,
     .pacotes-internacionais {
         flex-direction: column;
         align-items: center;
-        text-align: center;
     }
 
     .texto-pacotes {
@@ -138,10 +152,6 @@ main a:hover{
     .carrossel-pacotes {
         width: 100%;
         margin: 0;
-    }
-
-    .botao-carrossel {
-        /* display: none; Esconde os botões laterais em telas pequenas */
     }
 
     .banner-promocao h2 {

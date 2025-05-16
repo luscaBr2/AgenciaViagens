@@ -70,7 +70,7 @@ footer a {
 }
 
 /* Só vai abrir o botão em telas maiores */
-@media (max-width > 768px) {
+@media (min-width: 1250px) {
     .social-btn:hover {
         /* Aumenta a largura do botão ao passar o mouse, tem que ser em px se não quebra a medida da resolução da tela */
         width: 200px;
