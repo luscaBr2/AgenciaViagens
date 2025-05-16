@@ -10,6 +10,7 @@
     scroll-behavior: smooth;
     gap: 5px;
     padding: 20px 0;
+    margin: 0 25px;
 }
 
 .carrossel::-webkit-scrollbar {
@@ -19,6 +20,7 @@
 .card {
     min-width: 250px;
     flex-shrink: 0;
+    cursor: pointer;
     border-radius: 15px;
 }
 
@@ -42,11 +44,11 @@
 }
 
 .botao-esquerda {
-    left: -25px;
+    left: 0;
 }
 
 .botao-direita {
-    right: -25px;
+    right: 0;
 }
 
 .botao-carrossel:hover {
@@ -66,7 +68,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 30%;
+    width: 25%;
 }
 
 .texto-pacotes h3,
@@ -81,11 +83,10 @@
 }
 
 .carrossel-pacotes {
-    margin: 0 25px;
-    width: 70%;
+    width: 75%;
 }
 
-.card img{
+.card img {
     /* essa altura define o tamanho da imagem no card, para que todas as imagens fiquem do mesmo tamanho */
     height: 150px;
     max-width: 250px;
@@ -93,18 +94,18 @@
     border-top-left-radius: 15px;
 }
 
-main a{
+main a {
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease-in-out;
 }
 
-main a:hover{
+main a:hover {
     border: 1px solid #00a080;
     border-radius: 15px;
 }
 
-.banner-promocao{
+.banner-promocao {
     background: linear-gradient(to right, #00a080, #1B4C74);
     border-radius: 15px;
     margin: 68px 10px;
@@ -112,28 +113,28 @@ main a:hover{
     color: white;
 }
 
-.banner-promocao h2{
+.banner-promocao h2 {
     color: white;
-    font-size: 3em;
+    font-size: 2.7em;
 }
 
 /* Inicialmente, não aparece o elemento */
-.mobile-only{
+.mobile-only {
     display: none;
 }
 
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
-    .mobile-only{
+    .mobile-only {
         display: block;
     }
 
     /* para que os elementos que apenas deveriam aparecer em telas maiores sumirem */
-    .pc-only{
+    .pc-only {
         display: none;
     }
 
-    .banner-promocao{
+    .banner-promocao {
         padding: 1.5rem 0;
     }
 
@@ -145,13 +146,13 @@ main a:hover{
     }
 
     .texto-pacotes {
-        width: 100%;
+        width: 80%;
         margin-bottom: 1rem;
     }
 
     .carrossel-pacotes {
         width: 100%;
-        margin: 0;
+        margin: 0px;
     }
 
     .banner-promocao h2 {

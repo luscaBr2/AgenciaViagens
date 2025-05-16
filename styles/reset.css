@@ -3,7 +3,6 @@
     font-family: Navada Outline;
     src: local("Navada Outline"), url(../fonts/Navada\ Outline\ Demo.otf);
 }
-
 @font-face {
     font-family: Navada;
     src: local("Navada"), url(../fonts/Navada\ Demo.otf);
@@ -27,6 +26,39 @@
 a{
     text-decoration: none;
     color: inherit;
+}
+
+
+.btn-interativo {
+    position: relative;
+    border-radius: 15px;
+    margin-top: 5rem;
+    padding: 1rem 4rem;
+    font-size: 1.3rem;
+    border: none;
+    background: linear-gradient(to right, #00a080, #1B4C74);
+    transition: background 0.5s ease;
+    z-index: 0;
+}
+
+/* Pseudo elemento pra fazer o efeito de inverter o */
+.btn-interativo::before {
+    content: "";
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #1B4C74, #00a080);
+    /* gradiente invertido */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.btn-interativo:hover::before {
+    opacity: 1;
 }
 
 /* FONTE: https://www.joshwcomeau.com/css/custom-css-reset/ */

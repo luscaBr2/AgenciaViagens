@@ -50,8 +50,26 @@
         </div>
     </header>
 
-    <main>
+    <!-- Modal -->
+    <div class="modal fade" id="modalPacote" tabindex="-1" aria-labelledby="modalPacoteLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalPacoteLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    aqui vai o conteúdo do modal
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <main>
         <div class="pacotes-promocionais">
             <div class="texto-pacotes banner-promocao">
                 <h2>
@@ -76,7 +94,7 @@
                             onclick="carrosselCardsPromocional(-1)">&#10094;</button>
                         <div class="carrossel" id="carrosselCardsPromocionais">
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/lisboa.webp" class="card-img-top" alt="Lisboa">
                                 <div class="card-body">
                                     <h5 class="card-title">Lisboa</h5>
@@ -86,7 +104,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/santorini.jpg" class="card-img-top" alt="Santorini">
                                 <div class="card-body">
                                     <h5 class="card-title">Santorini</h5>
@@ -96,43 +114,43 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
-                                <img src="" class="card-img-top" alt="">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
+                                <img src="../assets/campos-do-jordao.jpg" class="card-img-top" alt="Campos do jordão">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"> dias</p>
-                                    <p class="fw-bold">x de R$ </p>
-                                    <p class="text-muted">A partir de R$ *</p>
+                                    <h5 class="card-title">Campos do jordão</h5>
+                                    <p class="card-text">10 dias</p>
+                                    <p class="fw-bold">4x de R$ 200</p>
+                                    <p class="text-muted">A partir de R$ 800*</p>
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
-                                <img src="" class="card-img-top" alt="">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
+                                <img src="../assets/chichen-itza-ruins.jpg" class="card-img-top" alt="Chichén Itzá">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"> dias</p>
-                                    <p class="fw-bold">x de R$ </p>
-                                    <p class="text-muted">A partir de R$ *</p>
+                                    <h5 class="card-title">Chichén Itzá</h5>
+                                    <p class="card-text">15 dias</p>
+                                    <p class="fw-bold">5x de R$ 370</p>
+                                    <p class="text-muted">A partir de R$ 1850*</p>
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
-                                <img src="" class="card-img-top" alt="">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
+                                <img src="../assets/cidade-do-cabo.jpg" class="card-img-top" alt="Cidade do cabo">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"> dias</p>
-                                    <p class="fw-bold">x de R$ </p>
-                                    <p class="text-muted">A partir de R$ *</p>
+                                    <h5 class="card-title">Cidade do cabo</h5>
+                                    <p class="card-text">10 dias</p>
+                                    <p class="fw-bold">7x de R$ 200</p>
+                                    <p class="text-muted">A partir de R$ 1400*</p>
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
-                                <img src="" class="card-img-top" alt="">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
+                                <img src="../assets/madrid.jpg" class="card-img-top" alt="Madrid">
                                 <div class="card-body">
-                                    <h5 class="card-title"></h5>
-                                    <p class="card-text"> dias</p>
-                                    <p class="fw-bold">x de R$ </p>
-                                    <p class="text-muted">A partir de R$ *</p>
+                                    <h5 class="card-title">Madrid</h5>
+                                    <p class="card-text">5 dias</p>
+                                    <p class="fw-bold">8x de R$ 187,50</p>
+                                    <p class="text-muted">A partir de R$ 1500*</p>
                                 </div>
                             </a>
 
@@ -162,8 +180,9 @@
 
                         <div class="carrossel" id="carrosselCardsNacionais">
 
-                            <a href="#" class="card">
-                                <img src="../assets/fernando-de-noronha.jpg" class="card-img-top" alt="Fernando de Noronha">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
+                                <img src="../assets/fernando-de-noronha.jpg" class="card-img-top"
+                                    alt="Fernando de Noronha">
                                 <div class="card-body">
                                     <h5 class="card-title">Fernando de Noronha</h5>
                                     <p class="card-text">10 dias</p>
@@ -172,7 +191,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/rio.jpg" class="card-img-top" alt="Rio de Janeiro">
                                 <div class="card-body">
                                     <h5 class="card-title">Rio de Janeiro</h5>
@@ -182,7 +201,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/gramado.jpg" class="card-img-top" alt="Gramado">
                                 <div class="card-body">
                                     <h5 class="card-title">Gramado</h5>
@@ -192,8 +211,9 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
-                                <img src="../assets/lencois-maranhenses.jpg" class="card-img-top" alt="Lençóis Maranhenses">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
+                                <img src="../assets/lencois-maranhenses.jpg" class="card-img-top"
+                                    alt="Lençóis Maranhenses">
                                 <div class="card-body">
                                     <h5 class="card-title">Lençóis Maranhenses</h5>
                                     <p class="card-text">5 dias</p>
@@ -202,7 +222,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/maceio.jpg" class="card-img-top" alt="Maceió">
                                 <div class="card-body">
                                     <h5 class="card-title">Maceió</h5>
@@ -212,7 +232,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/foz-do-iguacu.webp" class="card-img-top" alt="Foz do Iguaçu">
                                 <div class="card-body">
                                     <h5 class="card-title">Foz do Iguaçu</h5>
@@ -256,7 +276,7 @@
 
                         <div class="carrossel" id="carrosselCardsInternacionais">
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/bariloche.jpg" class="card-img-top" alt="Bariloche">
                                 <div class="card-body">
                                     <h5 class="card-title">Bariloche</h5>
@@ -266,7 +286,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/londres2.jpg" class="card-img-top" alt="Londres">
                                 <div class="card-body">
                                     <h5 class="card-title">Londres</h5>
@@ -276,7 +296,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/buenos-aires.jpg" class="card-img-top" alt="Buenos Aires">
                                 <div class="card-body">
                                     <h5 class="card-title">Buenos Aires</h5>
@@ -286,7 +306,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/roma.jpg" class="card-img-top" alt="Roma">
                                 <div class="card-body">
                                     <h5 class="card-title">Roma</h5>
@@ -296,7 +316,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/tokyo.webp" class="card-img-top" alt="Tokyo">
                                 <div class="card-body">
                                     <h5 class="card-title">Tokyo</h5>
@@ -306,7 +326,7 @@
                                 </div>
                             </a>
 
-                            <a href="#" class="card">
+                            <a class="card" data-bs-toggle="modal" data-bs-target="#modalPacote">
                                 <img src="../assets/seychelles.jpg" class="card-img-top" alt="Seychelles">
                                 <div class="card-body">
                                     <h5 class="card-title">Seychelles</h5>
@@ -328,7 +348,7 @@
     </main>
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-        <p class="col-md-4 mb-0 text-body-secondary">© 2025 | Site para portifólio</p>
+        <p class="col-md-4 mb-0 text-body-secondary">© 2025 | Site para portifólio <br> Todos os dados são fictícios</p>
 
         <div class="redes-sociais">
             <p>Desenvolvido por Lucas Santos</p>
@@ -369,7 +389,7 @@
         </ul>
 
         <!-- função para o botão de voltar ao topo, scrollar para o topo de página de maneira suave -->
-        <script src="utils/voltarTopo.js"></script>
+        <script src="../utils/voltarTopo.js"></script>
 
     </footer>
 
