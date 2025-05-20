@@ -1,0 +1,77 @@
+.container-contato {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-contato input {
+    width: 100%;
+    max-width: 500px;
+    padding: 1rem;
+    border-radius: 20px;
+    border: none;
+    border: rgba(0, 0, 0, 0.048) solid 1px;
+    box-shadow: 0 20px 30px -20px rgba(5, 5, 5, 0.24);
+    font-size: 1rem;
+}
+
+/* Remote aquelas setas padrões do input number, válido para todos os navegadores */
+.input-contato input[type="number"]::-webkit-inner-spin-button,
+.input-contato input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.formulario-contato {
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    padding: 2rem 0 1rem 0;
+}
+
+.formulario-contato label{
+    display: block;
+}
+
+.formulario-contato button {
+    position: relative;
+    border-radius: 15px;
+    padding: 1rem 4rem;
+    font-size: 1.3rem;
+    color: white;
+    border: none;
+    background: linear-gradient(to right, #00a080, #1B4C74);
+    transition: background 0.5s ease;
+    z-index: 0;
+    margin-top: 2rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Pseudo elemento pra fazer o efeito de inverter o */
+.formulario-contato button::before {
+    content: "";
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to right, #1B4C74, #00a080);
+    /* gradiente invertido */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.formulario-contato button:hover::before {
+    opacity: 1;
+}
+input#mensagem {
+    white-space: pre-wrap;
+    padding: 5rem;
+    box-sizing: border-box;
+    text-align: start;
+}

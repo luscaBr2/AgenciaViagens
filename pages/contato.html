@@ -1,4 +1,4 @@
-/*
+<!-- 
 Página de Contato
 Objetivo: Oferecer uma forma de contato direto com a agência.
 
@@ -12,5 +12,169 @@ Mapa de localização da agência
 
 Links para redes sociais
 
-Depoimentos de Clientes 
-*/
+Depoimentos de Clientes -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes de viagens</title>
+
+    <!-- CSS boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../styles/reset.css">
+
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+
+    <link rel="stylesheet" href="../styles/contato.css">
+</head>
+
+<body>
+    <header>
+        <!-- backgroud com style inline para facilitar a mudança de imagem em outras páginas que usarão o mesmo css -->
+        <div class="container-header" style="background-image: url(../assets/gramado.jpg)">
+            <nav>
+                <!-- logo -->
+                <img src="" alt="">
+
+                <ul class="navegadores">
+                    <b><a href="../index.html">HOME</a></b>
+                    <b><a href="pacotes.html">PACOTES</a></b>
+                    <b><a href="destinos.html">DESTINOS</a></b>
+                    <b><a href="faq.html">PERGUNTAS FREQUENTES</a></b>
+                    <b><a href="contato.html">CONTATO</a></b>
+
+                    <!-- AQUI VAI O BOTÃO DE X EM CASO DE RESPONSIVIDADE -->
+                </ul>
+            </nav>
+
+
+            <!-- Banner principal -->
+            <section class="banner">
+                <div class="banner-texto">
+                    <h1>
+                        <span class="font-navada-outline">CONTATE</span>
+                        <span class="font-navada">NOS</span>
+                    </h1>
+                </div>
+            </section>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="container-contato">
+
+            <!-- Seção para formulario de contato -->
+            <div class="formulario-contato">
+                <h2>Formulário de contato</h2>
+
+                <form class="input-contato">
+                    <label for="nome">
+                        *Nome:
+                        <br>
+                        <input required type="text" id="nome" placeholder="Lucas Santos">
+                    </label>
+                    
+                    <label for="telefone">
+                        *Telefone:
+                        <br>
+                        <input required type="number" id="telefone" placeholder="4002-8922 ligue agora ganhe já...">
+                    </label>
+
+                    <label for="email">
+                        Email:
+                        <br>
+                        <input type="email" id="email" placeholder="SeuMelhorEmail@email.com">
+                    </label>
+
+                    <label for="mensagem">
+                        Mensagem:
+                        <br>
+                        <input type="text" id="mensagem" placeholder="Assunto do contato">
+                        
+                    </label>
+
+                    <button>
+                        <span>Enviar</span>
+                    </button>
+                </form>
+            </div>
+
+            <!-- Seção para avaliações -->
+            <div class="avaliacao">
+                
+            </div>
+        </div>
+    </main>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">© 2025 | Site para portifólio <br> Todos os dados são fictícios</p>
+
+        <div class="redes-sociais">
+            <p>Desenvolvido por Lucas Santos</p>
+
+            <div class="social-links">
+
+                <a href="https://www.instagram.com/lusca_br2/" id="twitter" class="social-btn flex-center">
+                    <img src="https://img.icons8.com/?size=100&id=Xy10Jcu1L2Su&format=png&color=000000"
+                        alt="instagram desenvolvedor">
+
+                    <span>@lusca_br2</span>
+                </a>
+
+                <a href="https://www.linkedin.com/in/lucas-santos387/" id="linkedin" class="social-btn flex-center">
+                    <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+                        alt="linkedin desenvolvedor">
+
+                    <span>lucas-santos387</span>
+                </a>
+
+                <a href="https://github.com/luscaBr2" id="github" class="social-btn flex-center">
+                    <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
+                        alt="github desenvolvedor">
+                    <span>luscaBr2</span>
+                </a>
+
+                <a href="mailto:lucas.ifsp387@gmail.com" id="github" class="social-btn flex-center">
+                    <img src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000"
+                        alt="gmail desenvolvedor">
+                    <span>lucas.ifsp387@gmail.com</span>
+                </a>
+            </div>
+
+        </div>
+
+        <ul class=" nav col-md-4 justify-content-end">
+            <button onclick="voltarAoTopo()" class="btn btn-outline-light">Voltar ao topo</button>
+        </ul>
+
+        <!-- função para o botão de voltar ao topo, scrollar para o topo de página de maneira suave -->
+        <script src="../utils/voltarTopo.js"></script>
+
+    </footer>
+
+    <!-- Script do scroll do carrossel de cards -->
+    <script src="../utils/carrosselPacotesPromocionais.js"></script>
+    <script src="../utils/carrosselPacotesNacionais.js"></script>
+    <script src="../utils/carrosselPacotesInternacionais.js"></script>
+
+    <!-- Auto scroll a cada 3 segundos -->
+    <script>
+        // setInterval(() => {
+        //     <qualFunçãoUsar>(1);
+        // }, 3000);
+    </script>
+
+    <!-- JS boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
