@@ -3,9 +3,25 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    /* espaçamento entre os blocos */
+    gap: 7rem;
+    /* permite quebra em telas muito pequenas */
+    flex-wrap: wrap;
 }
 
-.input-contato input {
+/* define os dois blocos para ocuparem “meia tela” cada um */
+.formulario-contato,
+.avaliacao {
+    /* evita ficar muito estreito */
+    min-width: 300px;
+}
+
+.container-contato h2 {
+    text-align: center;
+}
+
+.input-contato input,
+.input-contato textarea {
     width: 100%;
     max-width: 500px;
     padding: 1rem;
@@ -23,18 +39,20 @@
     margin: 0;
 }
 
-.formulario-contato {
+.formulario-contato,
+.avaliacao {
     justify-content: center;
     align-items: center;
-    max-width: 50%;
     padding: 2rem 0 1rem 0;
 }
 
-.formulario-contato label{
+.formulario-contato label,
+.avaliacao label {
+    /* Deixa os labels do formulário alinhados um em cima do outro*/
     display: block;
 }
 
-.formulario-contato button {
+.input-contato button {
     position: relative;
     border-radius: 15px;
     padding: 1rem 4rem;
@@ -51,7 +69,7 @@
 }
 
 /* Pseudo elemento pra fazer o efeito de inverter o */
-.formulario-contato button::before {
+.input-contato button::before {
     content: "";
     border-radius: 15px;
     position: absolute;
@@ -66,12 +84,57 @@
     z-index: -1;
 }
 
-.formulario-contato button:hover::before {
+button:hover::before {
     opacity: 1;
 }
-input#mensagem {
-    white-space: pre-wrap;
-    padding: 5rem;
-    box-sizing: border-box;
-    text-align: start;
+
+/* ============================== */
+
+.estrelas {
+    display: inline-block;
+}
+
+.estrelas input {
+    display: none;
+}
+
+.estrelas label {
+    float: right;
+    cursor: pointer;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+.estrelas label:before {
+    content: '\2605';
+    font-size: 30px;
+}
+
+.estrelas input:checked~label,
+.estrelas label:hover,
+.estrelas label:hover~label {
+    color: #00a080;
+    transition: color 0.3s;
+}
+
+/* ============================== */
+
+.mapa{
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0 1rem 0;
+    display: flex;
+}
+
+.mapa .mapouter {
+  /* sobrescreve o inline-style de 500px */
+  width: 80% !important;
+  height: 450px !important;
+  max-width: none;
+}
+
+.mapa .gmap_canvas,
+.mapa .gmap_canvas iframe {
+  width: 100% !important;
+  height: 100% !important;
 }

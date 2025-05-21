@@ -69,7 +69,6 @@ Depoimentos de Clientes -->
 
     <main>
         <div class="container-contato">
-
             <!-- Seção para formulario de contato -->
             <div class="formulario-contato">
                 <h2>Formulário de contato</h2>
@@ -80,7 +79,7 @@ Depoimentos de Clientes -->
                         <br>
                         <input required type="text" id="nome" placeholder="Lucas Santos">
                     </label>
-                    
+
                     <label for="telefone">
                         *Telefone:
                         <br>
@@ -96,8 +95,8 @@ Depoimentos de Clientes -->
                     <label for="mensagem">
                         Mensagem:
                         <br>
-                        <input type="text" id="mensagem" placeholder="Assunto do contato">
-                        
+                        <textarea cols="10" rows="5" type="text" id="mensagem"
+                            placeholder="Assunto do contato"></textarea>
                     </label>
 
                     <button>
@@ -108,7 +107,84 @@ Depoimentos de Clientes -->
 
             <!-- Seção para avaliações -->
             <div class="avaliacao">
-                
+
+                <h2>Relate sua experiência</h2>
+
+                <form class="input-contato">
+                    <label for="nome">
+                        *Nome:
+                        <br>
+                        <input required type="text" id="nome" placeholder="Lucas Santos">
+                    </label>
+
+                    <label for="comentario">
+                        *Comentário:
+                        <br>
+                        <textarea required cols="10" rows="5" type="text" id="mensagem"
+                            placeholder="Relate sua experiência conosc"></textarea>
+                    </label>
+
+                    <div class="estrelas">
+                        <input required value="5" name="estrela" id="star5" type="radio">
+                        <label for="star5"></label>
+                        <input value="4" name="estrela" id="star4" type="radio">
+                        <label for="star4"></label>
+                        <input value="3" name="estrela" id="star3" type="radio">
+                        <label for="star3"></label>
+                        <input value="2" name="estrela" id="star2" type="radio">
+                        <label for="star2"></label>
+                        <input value="1" name="estrela" id="star1" type="radio">
+                        <label for="star1"></label>
+                    </div>
+
+                    <button>
+                        <span>Enviar</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="mapa">
+            <div class="mapouter" style="position:relative; text-align:right; width:500px; height:450px;">
+                <div class="gmap_canvas" style="overflow:hidden; background:none!important; width:500px; height:450px;">
+                    <iframe width="500px" height="450px" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed/v1/place?q=Instituto%20Federal%20de%20Educa%C3%A7%C3%A3o%2C%20Ci%C3%AAncia%20e%20Tecnologia%20de%20S%C3%A3o%20Paulo%20-%20Campus%20Campos%20do%20Jord%C3%A3o&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8">
+                    </iframe>
+                </div>
+                <a href="https://norsumediagroup.com/embed-google-map-website-free" target="_blank"
+                    rel="noopener noreferrer" class="gme-generated-link">
+                    Embed Map on Website for Free
+                </a>
+                <style>
+                    .mapouter {
+                        position: relative;
+                        text-align: right;
+                    }
+
+                    .gmap_canvas {
+                        overflow: hidden;
+                        background: none !important;
+                    }
+
+                    .gmap_canvas iframe {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .mapouter a {
+                        display: block;
+                        font-size: 0.85em;
+                        text-align: center;
+                        padding: 5px 0;
+                        color: #6c757d;
+                        text-decoration: none;
+                    }
+
+                    .gme-generated-link {
+                        display: none !important;
+                    }
+                </style>
             </div>
         </div>
     </main>
