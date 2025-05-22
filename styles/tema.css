@@ -1,12 +1,9 @@
+/* Paleta de cores: https://paletadecores.com/cores/preto/ */
+
 /* estilização do tema dark */
 body.tema-escuro {
     background-color: #1c1c1c;
     color: #ffffff;
-    transition: 0.5s;
-}
-
-body{
-    transition: 0.5s;
 }
 
 /* estilização do botão para alternar o tema entre dark e light */

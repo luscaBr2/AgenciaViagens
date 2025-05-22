@@ -123,6 +123,11 @@ main a:hover {
     display: none;
 }
 
+.btn-interativo{
+    margin: 0;
+    padding: 10px 30px;
+}
+
 /* RESPONSIVIDADE */
 @media (max-width: 768px) {
     .mobile-only {
@@ -162,4 +167,34 @@ main a:hover {
     .banner-promocao h4 {
         font-size: 1.2rem;
     }
+}
+
+/* Estilização para o tema dark */
+
+body.tema-escuro .modal-content {
+    background-color: #242424;
+    color: #fff;
+}
+
+body.tema-escuro .modal-header,
+body.tema-escuro .modal-footer {
+    border: #383838 1px solid;
+}
+
+body.tema-escuro .card {
+    background-color: #242424;
+}
+
+body.tema-escuro .card:hover{
+    color: #00a080;
+}
+
+body.tema-escuro .botao-carrossel{
+    color: #ffffff;
+    background-color: #383838;
+}
+
+/* Correção do botão de fechar do modal feito pelo bootstrap */
+body.tema-escuro .btn-close{
+    background: transparent url("https://img.icons8.com/?size=100&id=83149&format=png&color=ffffff") center/1.5em auto no-repeat;
 }

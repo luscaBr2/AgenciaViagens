@@ -149,6 +149,7 @@ main h1 {
 
 body.tema-escuro input{
     background-color: #383838;
+    color: #ffffff;
 }
 
 body.tema-escuro input::-webkit-input-placeholder{
