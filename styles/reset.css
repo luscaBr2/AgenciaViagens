@@ -28,6 +28,12 @@ a{
     color: inherit;
 }
 
+/* Remove aquelas setas padrões do input number, válido para todos os navegadores */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 
 .btn-interativo {
     position: relative;
@@ -41,7 +47,7 @@ a{
     z-index: 0;
 }
 
-/* Pseudo elemento pra fazer o efeito de inverter o */
+/* Pseudo elemento pra fazer o efeito de inverter o degradê */
 .btn-interativo::before {
     content: "";
     border-radius: 15px;

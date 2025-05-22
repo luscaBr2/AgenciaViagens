@@ -30,11 +30,31 @@ Depoimentos de Clientes -->
 
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/tema.css">
 
     <link rel="stylesheet" href="../styles/contato.css">
+    
 </head>
 
 <body>
+    <div class="btn-tema">
+        <label class="switch">
+            <!-- tema escuro = true, tema claro = false -->
+            <input onchange="mudarTema()" id="checkbox-tema" type="checkbox" />
+            <span class="slider">
+                <div class="star star_1"></div>
+                <div class="star star_2"></div>
+                <div class="star star_3"></div>
+                <svg viewBox="0 0 16 16" class="cloud_1 cloud">
+                    <path transform="matrix(.77976 0 0 .78395-299.99-418.63)" fill="#fff"
+                        d="m391.84 540.91c-.421-.329-.949-.524-1.523-.524-1.351 0-2.451 1.084-2.485 2.435-1.395.526-2.388 1.88-2.388 3.466 0 1.874 1.385 3.423 3.182 3.667v.034h12.73v-.006c1.775-.104 3.182-1.584 3.182-3.395 0-1.747-1.309-3.186-2.994-3.379.007-.106.011-.214.011-.322 0-2.707-2.271-4.901-5.072-4.901-2.073 0-3.856 1.202-4.643 2.925">
+                    </path>
+                </svg>
+            </span>
+        </label>
+    </div>
+
+
     <header>
         <!-- backgroud com style inline para facilitar a mudança de imagem em outras páginas que usarão o mesmo css -->
         <div class="container-header" style="background-image: url(../assets/gramado.jpg)">
@@ -68,6 +88,8 @@ Depoimentos de Clientes -->
     </header>
 
     <main>
+
+
         <div class="container-contato">
             <!-- Seção para formulario de contato -->
             <div class="formulario-contato">
@@ -77,13 +99,13 @@ Depoimentos de Clientes -->
                     <label for="nome">
                         *Nome:
                         <br>
-                        <input required type="text" id="nome" placeholder="Lucas Santos">
+                        <input type="text" id="nomeContato" placeholder="Lucas Santos">
                     </label>
 
                     <label for="telefone">
                         *Telefone:
                         <br>
-                        <input required type="number" id="telefone" placeholder="4002-8922 ligue agora ganhe já...">
+                        <input type="number" id="telefone" placeholder="4002-8922 ligue agora ganhe já...">
                     </label>
 
                     <label for="email">
@@ -110,31 +132,36 @@ Depoimentos de Clientes -->
 
                 <h2>Relate sua experiência</h2>
 
-                <form class="input-contato">
+                <form class="input-contato-avaliacao">
                     <label for="nome">
                         *Nome:
                         <br>
-                        <input required type="text" id="nome" placeholder="Lucas Santos">
+                        <input type="text" id="nomeComentario" placeholder="Lucas Santos">
                     </label>
 
                     <label for="comentario">
-                        *Comentário:
+                        Comentário:
                         <br>
-                        <textarea required cols="10" rows="5" type="text" id="mensagem"
-                            placeholder="Relate sua experiência conosc"></textarea>
+                        <textarea cols="10" rows="5" type="text" id="comentario"
+                            placeholder="Relate sua experiência conosco :)"></textarea>
                     </label>
 
                     <div class="estrelas">
-                        <input required value="5" name="estrela" id="star5" type="radio">
-                        <label for="star5"></label>
-                        <input value="4" name="estrela" id="star4" type="radio">
-                        <label for="star4"></label>
-                        <input value="3" name="estrela" id="star3" type="radio">
-                        <label for="star3"></label>
-                        <input value="2" name="estrela" id="star2" type="radio">
-                        <label for="star2"></label>
-                        <input value="1" name="estrela" id="star1" type="radio">
-                        <label for="star1"></label>
+
+                        <input value="1" name="estrela" id="estrela1" type="radio">
+                        <label for="estrela1"></label>
+
+                        <input value="2" name="estrela" id="estrela2" type="radio">
+                        <label for="estrela2"></label>
+
+                        <input checked value="3" name="estrela" id="estrela3" type="radio">
+                        <label for="estrela3"></label>
+
+                        <input value="4" name="estrela" id="estrela4" type="radio">
+                        <label for="estrela4"></label>
+
+                        <input required value="5" name="estrela" id="estrela5" type="radio">
+                        <label for="estrela5"></label>
                     </div>
 
                     <button>
@@ -144,6 +171,8 @@ Depoimentos de Clientes -->
             </div>
         </div>
 
+        <br>
+        <h2>Venha nos visitar :)</h2>
         <div class="mapa">
             <div class="mapouter" style="position:relative; text-align:right; width:500px; height:450px;">
                 <div class="gmap_canvas" style="overflow:hidden; background:none!important; width:500px; height:450px;">
@@ -240,17 +269,17 @@ Depoimentos de Clientes -->
     <script src="../utils/carrosselPacotesNacionais.js"></script>
     <script src="../utils/carrosselPacotesInternacionais.js"></script>
 
-    <!-- Auto scroll a cada 3 segundos -->
-    <script>
-        // setInterval(() => {
-        //     <qualFunçãoUsar>(1);
-        // }, 3000);
-    </script>
+
 
     <!-- JS boostrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
+
+    <script src="../utils/validacaoInputContato.js"></script>
+    <script src="../utils/validacaoInputComentario.js"></script>
+    <script src="../utils/mudarTema.js"></script>
+
 </body>
 
 </html>

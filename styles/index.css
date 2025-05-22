@@ -1,3 +1,4 @@
+/* =============================== */
 
 .input-pesquisa input {
     width: 100%;
@@ -10,12 +11,13 @@
     font-size: 1rem;
 }
 
-/* Remote aquelas setas padrões do input number, válido para todos os navegadores */
-.input-pesquisa input[type="number"]::-webkit-inner-spin-button,
-.input-pesquisa input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
+input[type=date]::-webkit-datetime-edit{ color: transparent; }
+input[type=date]:valid::-webkit-datetime-edit{ color: #000; }
+input[type=date]:focus::-webkit-datetime-edit{ color: #000; }
+
+input[type=date]{ color: transparent; }
+input[type=date]:valid{ color: #000; }
+input[type=date]:focus{ color: #000; }
 
 .container-pesquisa {
     display: flex;
@@ -143,4 +145,35 @@ main h1 {
     color: rgba(107, 114, 128, 1);
 }
 
+/* Estilização para o tema escuro */
 
+body.tema-escuro input{
+    background-color: #383838;
+}
+
+body.tema-escuro input::-webkit-input-placeholder{
+    color: #ffffff;
+    text-decoration-color: #ffffff;
+}
+
+/* Primeiro deixa transparente o input e depois o valid e o focus como branco */
+body.tema-escuro input[type=date]::-webkit-datetime-edit{ color: transparent; }
+body.tema-escuro input[type=date]:valid::-webkit-datetime-edit{ color: #ffffff; }
+body.tema-escuro input[type=date]:focus::-webkit-datetime-edit{ color: #ffffff; }
+
+body.tema-escuro input[type=date]{ color: transparent; }
+body.tema-escuro input[type=date]:valid{ color: #ffffff; }
+body.tema-escuro input[type=date]:focus{ color: #ffffff; }
+
+body.tema-escuro .avaliacoes .card-cabecalho{
+    color: 909090;
+}
+
+body.tema-escuro .avaliacoes .menssagem,
+body.tema-escuro .avaliacoes .nome{
+    color: #909090;
+}
+
+body.tema-escuro .avaliacoes .card {
+    background-color: #242424;
+}
