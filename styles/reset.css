@@ -3,12 +3,34 @@
     font-family: Navada Outline;
     src: local("Navada Outline"), url(../fonts/Navada\ Outline\ Demo.otf);
 }
+
 @font-face {
     font-family: Navada;
     src: local("Navada"), url(../fonts/Navada\ Demo.otf);
 }
+
 /* Importa a fonte 'Inter' do google */
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"); 
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+/* Para que os itens de mobile não apareçam em telas maiores */
+@media (min-width: 900px) {
+    .mobile-only {
+        display: none;
+    }
+    .pc-only{
+        display: block;
+    }
+}
+
+/* Para que os itens de mobile apareçam em telas menores */
+@media (max-width: 900px) {
+    .mobile-only {
+        display: block;
+    }
+    .pc-only {
+        display: none;
+    }
+}
 
 .font-navada {
     font-family: 'Navada', sans-serif;
@@ -18,12 +40,12 @@
     font-family: 'Navada Outline', sans-serif;
 }
 
-*{
+* {
     font-family: 'Inter', sans-serif;
     scroll-behavior: smooth;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
@@ -67,6 +89,7 @@ input[type="number"]::-webkit-outer-spin-button {
     opacity: 1;
 }
 
+/* RESET CSS */
 /* FONTE: https://www.joshwcomeau.com/css/custom-css-reset/ */
 
 /* 1. Use a more-intuitive box-sizing model */

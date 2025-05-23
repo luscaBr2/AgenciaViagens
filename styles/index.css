@@ -157,6 +157,17 @@ body.tema-escuro input::-webkit-input-placeholder{
     text-decoration-color: #ffffff;
 }
 
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 950px) {
+    .colunas {
+        flex-direction: column;
+    }
+    .avaliacoes .card {
+        width: 90%;
+    }
+}
+
 /* Primeiro deixa transparente o input e depois o valid e o focus como branco */
 body.tema-escuro input[type=date]::-webkit-datetime-edit{ color: transparent; }
 body.tema-escuro input[type=date]:valid::-webkit-datetime-edit{ color: #ffffff; }
