@@ -118,25 +118,20 @@ main a:hover {
     font-size: 2.7em;
 }
 
-/* Inicialmente, não aparece o elemento */
-.mobile-only {
-    display: none;
+.btn-interativo {
+    margin: 0;
+    padding: 10px 30px;
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 768px) {
-    .mobile-only {
-        display: block;
+@media (max-width: 1250px) {
+    /* Diminui o texto, a partir de 1250px ele sai do layout */
+    .banner-promocao h2{
+        font-size: 2rem;
     }
+}
 
-    /* para que os elementos que apenas deveriam aparecer em telas maiores sumirem */
-    .pc-only {
-        display: none;
-    }
-
-    .banner-promocao {
-        padding: 1.5rem 0;
-    }
+@media (max-width: 900px) {    
 
     .pacotes-promocionais,
     .pacotes-nacionais,
@@ -162,4 +157,34 @@ main a:hover {
     .banner-promocao h4 {
         font-size: 1.2rem;
     }
+}
+
+/* Estilização para o tema dark */
+
+body.tema-escuro .modal-content {
+    background-color: #242424;
+    color: #fff;
+}
+
+body.tema-escuro .modal-header,
+body.tema-escuro .modal-footer {
+    border: #383838 1px solid;
+}
+
+body.tema-escuro .card {
+    background-color: #242424;
+}
+
+body.tema-escuro .card:hover {
+    color: #00a080;
+}
+
+body.tema-escuro .botao-carrossel {
+    color: #ffffff;
+    background-color: #383838;
+}
+
+/* Correção do botão de fechar do modal feito pelo bootstrap */
+body.tema-escuro .btn-close {
+    background: transparent url("https://img.icons8.com/?size=100&id=83149&format=png&color=ffffff") center/1.5em auto no-repeat;
 }

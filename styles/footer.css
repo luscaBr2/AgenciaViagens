@@ -54,7 +54,7 @@ footer a {
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     footer {
         flex-direction: column;
         text-align: center;

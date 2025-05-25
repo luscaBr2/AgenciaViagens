@@ -19,7 +19,7 @@
 }
 
 .perguntas h2{
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
 .img-aviao, .img-onibus{
@@ -37,3 +37,35 @@
     margin: 4rem;
 }
 /* ====================== */
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .perguntas{
+        margin: 2rem 1rem;
+    }
+
+    .perguntas button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    .img-aviao, .img-onibus{
+        max-width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .documentos-aviao , 
+    .documentos-onibus{
+        display: block;
+    }
+
+    .perguntas h3{
+        margin: 2rem 0;
+    }
+
+    .documentos-aviao ol, .documentos-onibus ol{
+        margin: 1rem 0;
+    }
+}
