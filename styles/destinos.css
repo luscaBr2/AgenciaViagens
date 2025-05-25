@@ -44,3 +44,9 @@
         width: 100%;
     }
 }
+
+/* estilização do tema dark */
+
+body.tema-escuro table tr{
+    background-color: #fff;
+}

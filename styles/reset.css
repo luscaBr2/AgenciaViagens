@@ -12,23 +12,23 @@
 /* Importa a fonte 'Inter' do google */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-/* Para que os itens de mobile não apareçam em telas maiores */
-@media (min-width: 900px) {
-    .mobile-only {
-        display: none;
-    }
-    .pc-only{
-        display: block;
-    }
-}
-
-/* Para que os itens de mobile apareçam em telas menores */
+/* Se a tela for menor que 900px, mostra os itens de mobile, caso contrário, mostra os itens de pc */
 @media (max-width: 900px) {
     .mobile-only {
-        display: block;
+        display: flex;
     }
     .pc-only {
         display: none;
+    }
+}
+
+/* Se a tela for maior que 900px, mostra os itens de pc, caso contrário, mostra os itens de mobile */
+@media (min-width: 901px) {
+    .mobile-only {
+        display: none;
+    }
+    .pc-only {
+        display: flex;
     }
 }
 

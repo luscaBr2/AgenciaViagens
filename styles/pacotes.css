@@ -118,21 +118,20 @@ main a:hover {
     font-size: 2.7em;
 }
 
-/* Inicialmente, não aparece o elemento */
-.mobile-only {
-    display: none;
-}
-
 .btn-interativo {
     margin: 0;
     padding: 10px 30px;
 }
 
 /* RESPONSIVIDADE */
-@media (max-width: 900px) {    
-    .banner-promocao {
-        padding: 1.5rem 0;
+@media (max-width: 1250px) {
+    /* Diminui o texto, a partir de 1250px ele sai do layout */
+    .banner-promocao h2{
+        font-size: 2rem;
     }
+}
+
+@media (max-width: 900px) {    
 
     .pacotes-promocionais,
     .pacotes-nacionais,
