@@ -68,18 +68,21 @@ header {
 
 @media (max-width: 768px) {
 
-    .banner-texto h1{
+    .banner-texto h1 {
         font-size: 3.5rem;
         letter-spacing: 2px;
     }
-    .navegadores {
-        flex-direction: column;
-        align-items: center;
+
+    /* Colocar os navegadores no centro */
+    .container-header nav {
+        justify-content: center;
+        text-align: center;
         padding: 0;
     }
 
     .navegadores a {
         display: block;
         margin: 0.5rem 0;
+        font-size: 1.2rem;
     }
 }
